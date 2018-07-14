@@ -5,13 +5,13 @@ import validaton from "./../../../dist/es"
 @validaton({
   rules: {
     name: [{ test: (val) => !!val, errorText: "Is Required" }],
-    // email: [
-    //   { test: (val) => !!val, errorText: "Is Required" },
-    //   {
-    //     test: /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/,
-    //     errorText: 'Email need to format',
-    //   }
-    // ]
+    email: [
+      { test: (val) => !!val, errorText: "Is Required" },
+      {
+        test: /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/,
+        errorText: 'Email need to format',
+      }
+    ]
   }
 })
 export default class ValidationForm extends Component {
