@@ -6,7 +6,7 @@ React hoc for validation form, it's only the validation logic
 ```jsx
 import validation from ".."
 
-@validaton({
+@validation({
   rules: {
     name: [{ test: (val) => !!val, errorText: "Is Required" }],
     email: [
